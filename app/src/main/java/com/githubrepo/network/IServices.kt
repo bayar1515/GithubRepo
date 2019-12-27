@@ -7,5 +7,5 @@ import retrofit2.http.Path
 
 interface IServices {
     @GET("users/{user}/repos")
-    fun getProjectList(@Path("user") user: String?) :retrofit2.Call<RepoModel>
+    fun getProjectList(@Path("user") user: String?) :retrofit2.Call<ArrayList<RepoModel>>
 }

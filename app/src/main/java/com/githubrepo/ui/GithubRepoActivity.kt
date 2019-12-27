@@ -1,7 +1,8 @@
-package com.githubrepo
+package com.githubrepo.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.githubrepo.R
 
 class GithubRepoActivity : AppCompatActivity() {
 

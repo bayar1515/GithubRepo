@@ -42,4 +42,15 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Beauty Toast
+    implementation 'com.valdesekamdem.library:md-toast:0.9.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // Progress
+    implementation 'com.wang.avi:library:2.1.3'
 }

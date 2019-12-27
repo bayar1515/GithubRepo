@@ -3,4 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stars_holder">Stars: %1$d</string>
+    <string name="open_issues_holder">Open Issues: %1$d</string>
+    <string name="favorite">Add Favorite</string>
+    <string name="home">Home</string>
+    <string name="add_favorites_success">Repo added to favorites</string>
+    <string name="remove_favorites_success">Repo removed from favorites</string>
+    <string name="submit">Submit</string>
+    <string name="username">Username</string>
+    <string name="repo_list_error">User not found</string>
 </resources>

@@ -3,11 +3,10 @@ package com.githubrepo.model
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
-
-
-class RepoModel {
+class RepoModel :Serializable {
     @SerializedName("id")
     @Expose
     private var id: Int? = null
@@ -69,7 +68,7 @@ class RepoModel {
     }
 
 
-    class Owner {
+    class Owner :Serializable{
         @SerializedName("login")
         @Expose
         private var login: String? = null

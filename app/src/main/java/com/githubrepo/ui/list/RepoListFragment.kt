@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.githubrepo.R
@@ -34,6 +35,7 @@ class RepoListFragment : Fragment(),RepoListAdapter.IRepoListAdapter {
     private lateinit var progress:AVLoadingIndicatorView
     private lateinit var searchView: SearchView
     private lateinit var sharedController: SharedController
+    private lateinit var noDataText :TextView
     private var query = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +54,7 @@ class RepoListFragment : Fragment(),RepoListAdapter.IRepoListAdapter {
 
         sharedController = SharedController(activity as Activity)
         progress = v.findViewById(R.id.progress)
+        noDataText = v.findViewById(R.id.noDataText)
         progress.smoothToHide()
         searchView = v.findViewById(R.id.searchView)
         recyclerView = v.findViewById(R.id.recyclerView)
@@ -110,8 +113,14 @@ class RepoListFragment : Fragment(),RepoListAdapter.IRepoListAdapter {
     }
 
     private fun getRepoListSuccess(repoList:ArrayList<RepoModel>){
-        adapter.setList(repoList,favoriteList)
-        progress.smoothToHide()
+        if (repoList.size == 0 ){
+            noDataText.visibility = View.VISIBLE
+        }else {
+            noDataText.visibility = View.GONE
+            adapter.setList(repoList,favoriteList)
+            progress.smoothToHide()
+        }
+
     }
 
     override fun itemClicked(repoModel: RepoModel) {

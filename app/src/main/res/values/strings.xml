@@ -12,4 +12,5 @@
     <string name="submit">Submit</string>
     <string name="username">Username</string>
     <string name="repo_list_error">User not found</string>
+    <string name="no_data_text">Type github username to see repos</string>
 </resources>

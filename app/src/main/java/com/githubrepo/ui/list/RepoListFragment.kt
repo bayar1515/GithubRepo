@@ -54,7 +54,7 @@ class RepoListFragment : Fragment(),RepoListAdapter.IRepoListAdapter {
 
         sharedController = SharedController(activity as Activity)
         progress = v.findViewById(R.id.progress)
-        noDataText = v.findViewById(R.id.noDataText)
+        noDataText = v.findViewgitById(R.id.noDataText)
         progress.smoothToHide()
         searchView = v.findViewById(R.id.searchView)
         recyclerView = v.findViewById(R.id.recyclerView)
